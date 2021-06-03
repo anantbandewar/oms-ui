@@ -1,4 +1,4 @@
-# Oms
+# Oms - Order Management Service
 
 Develop screens using Angular and they shall use the WebAPI developed above.
 
