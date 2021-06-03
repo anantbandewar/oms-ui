@@ -1,1 +1,32 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark header-nav navbar-padding">
+  <div class="container-fluid padding-50">
+
+    <div class="nav-item navbar-header" routerLinkActive="active">
+      <a routerLink="/" class="navbar-brand">OMS</a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse">
+
+        <ul class="navbar-nav mr-auto">
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item dropdown" placement="bottom-right" ngbDropdown>
+                <a ngbDropdownToggle class="myPointer nav-link dropdown-toggle" role="button">
+                    {{userName}}
+                </a>
+                <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" routerLink="/profile">Profile</a></li>
+                    <li><a class="dropdown-item" routerLink="/help">Help</a></li>
+                    <li><a class="dropdown-item myPointer" (click)="onLogOut()">Sign out</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+  </div>
+</nav>
