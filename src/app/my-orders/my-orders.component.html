@@ -1,1 +1,28 @@
-<p>my-orders works!</p>
+<div class="page-header">
+    <h4 class="container-fluid padding-50">My Orders</h4>
+</div>
+
+<hr class="shadow-divider"/>
+
+<div class="container-fluid padding-50">
+    <div class="card">
+        <h5 class="card-header">Results</h5>
+        <div class="card-body">
+            <div *ngIf="orders.length > 0; else noOrders">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" *ngFor="let order of orders">
+                        <app-my-order [order]="order"></app-my-order>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ng-template #noOrders>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <h4 class="text-center text-muted">No Orders</h4>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+
+</div>
